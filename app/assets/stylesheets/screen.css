@@ -1,0 +1,600 @@
+/*----------------------------
+ 
+ Tinyproj : styles for screen
+ (c)2011
+ 
+----------------------------*/
+
+body, input, textarea, select, button {
+    font: normal normal normal 13px/18px "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    text-shadow: 0 0 1px rgba(0,0,0,0.01);
+    text-rendering: optimizeLegibility;
+}
+
+input, textarea, button, a {
+    outline: none;
+    border: none;
+}
+
+body, input, textarea, button {
+    background: #fff;
+    color: #32342e;
+}
+
+a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #44c59f;
+}
+
+a:hover {
+    color: #a19e99;
+    text-decoration: none;
+}
+
+::selection {
+    background: #73e6f7;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #73e6f7;
+    color: #fff;
+}
+
+#content h1 {
+    letter-spacing: -1px;
+    font-size: 30px;
+    margin-bottom: 18px;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 21px;
+}
+
+#project-owners ul li, #project-owners ol li, #talent ul li, #talent ol li {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+#project-owners ul, #project-owners ol, #talent ul, #talent ol {
+    margin-bottom: 15px;
+}
+
+#content p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#content p.small, #content.project p.status em {
+    font-size: 12px;
+    line-height: 16px;
+    color: #a19e99;
+}
+
+#content p.small.inline {
+    display: inline-block;
+}
+
+#content p.small a {
+    color: #a19e99;
+}
+
+#content p.private {
+    background: url(/assets/images/icon-lock.png) 0 5px no-repeat;
+    padding-left: 11px;
+}
+
+#flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #141512;
+    color: #73e6f7;
+    font-size: 22px;
+    text-align: center;
+    padding: 22px 0;
+    z-index: 1337;
+    border-bottom: 7px solid #a19e99;
+}
+
+.blank-slate {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 21px;
+    border: 3px solid #e6e3db;
+    color: #44c59f;
+    padding: 12px 18px;
+}
+
+
+/*----------------------------
+ buttons
+----------------------------*/
+.btn {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #141512;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 9px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn:hover {
+    color: #fff;
+    background: #31bb92;
+}
+
+.btn:active {
+    background: #141512;
+}
+
+.btn em {
+    font-style: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #f5f760;
+    font-weight: normal;
+}
+
+.btn.small {
+    font-size: 12px;
+}
+
+
+/*----------------------------
+ form styles
+----------------------------*/
+#model-errors {
+    margin: 18px 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f72828;
+}
+
+#model-errors li {
+    list-style: none;
+}
+
+input, textarea {
+    border: 2px solid #e6e3db;
+    padding: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 65%;
+}
+
+input:focus, textarea:focus {
+    border-color: #73e6f7;
+}
+
+form {
+    margin-bottom: 36px;
+}
+
+.blank-slate form {
+    margin-bottom: 0;
+}
+
+form fieldset div {
+    margin-top: 12px;
+}
+
+form fieldset div.checky label {
+    display: block;
+}
+
+form fieldset div.checky input {
+    width: auto;
+}
+
+form fieldset label, form fieldset div.checky h4, #content.project #details h2 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+form fieldset label {
+    cursor: pointer;
+}
+
+form fieldset label span {
+    color: #a19e99;
+    font-weight: normal;
+}
+
+form fieldset div.checky h4, #content.project #details h2 {
+    border-bottom: 1px dashed #e6e3db;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+}
+
+form input#budget, form input#cc-cvc, form input.tiny {
+    width: 15%;
+}
+
+
+/*----------------------------
+ layout
+----------------------------*/
+#universe {
+    border-top: 5px solid #44c59f;
+    padding-top: 36px;
+}
+
+#header {
+    text-align: center;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: -1px;
+    text-decoration: none;
+    background: url(/assets/images/out.png) 0 0 no-repeat;
+    width: 182px;
+    height: 49px;
+    display: block;
+    float: left;
+    text-indent: -1000em;
+}
+
+#logo:active {
+    position: relative;
+    top: 3px;
+}
+
+#footer {
+    margin: 18px 0;
+    padding-top: 18px;
+    border-top: 1px dashed #e6e3db;
+    color: #a19e99;
+}
+
+#footer a {
+    font-weight: normal;
+    color: #a19e99;
+}
+
+
+/*----------------------------
+ homepage
+----------------------------*/
+#signup, #learn-more {
+    margin: 36px 0;
+}
+
+#signup .or {
+    text-align: center;
+}
+
+#signup .or span {
+    display: block;
+    margin: 14px 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #ccc; /*TODO make this a hue of the grey we use*/
+    color: #fff;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 10px;
+    padding: 5px 4px;
+    position: relative;
+    bottom: 27px;
+    left: 8px;
+    width: 20px;
+}
+
+h2#tagline {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1px;
+    font-weight: normal;
+    margin-bottom: -4px;
+}
+
+h2#tagline a {
+    text-decoration: none;
+}
+
+#signup h2 {
+    margin-bottom: 6px;
+}
+
+#signup h3 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #a19e99;
+}
+
+#faq {
+    margin-top: 36px;
+}
+
+.steps li {
+    list-style: none;
+    color: #32342e;
+    font-size: 19px;
+    line-height: 24px;
+    font-family: Georgia,Century,Times,serif;
+    margin-bottom: 4px;
+}
+
+.steps li span {
+    color: #a19e99;
+}
+
+.steps li span:after {
+    content: '.';
+}
+
+#short-term-is {
+    margin-top: 12px;
+    background: #f5f760;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+#short-term-is p:first-child {
+    margin-bottom: 12px;
+}
+
+
+/*----------------------------
+ admin
+----------------------------*/
+#content.admin {
+    border-top: 12px solid #f72828;
+    padding-top: 36px;
+}
+
+#content.admin .project {
+    border-bottom: 3px solid #a19e99;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#content.admin .project:last-child {
+    border-bottom: none;
+}
+
+#content.admin a.small {
+    font-size: 11px;
+    color: #a19e99;
+}
+
+#content.admin strong.edited-bug, .sent-bug {
+    background: #73e6f7;
+    padding: 2px;
+}
+
+
+/*----------------------------
+ project dashboard
+----------------------------*/
+#content.project p.status span {
+    font-weight: bold;
+}
+
+#payment, #content.project #details, .stats, #replies {
+    margin-top: 36px;
+}
+
+.stats > div {
+    text-align: right;
+}
+
+.stats > div h5 {
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+.stats > div span {
+    text-transform: uppercase;
+    color: #a19e99;
+    font-weight: bold;
+}
+
+
+/*----------------------------
+ project replies
+----------------------------*/
+#replies h2 {
+    font-size: 22px;
+}
+
+#replies h2 span {
+    font-weight: normal;
+    color: #a19e99;
+}
+
+#replies h2 span:first-child {
+    color: #e6e3db;
+}
+
+#replies .talent {
+    border-bottom: 1px dashed #e6e3db;
+    padding: 9px 6px;
+}
+
+#replies .talent:hover {
+    background: #d5f8fd;
+}
+
+#replies .talent:last-child {
+    border-bottom: none;
+}
+
+#replies .talent strong {
+    font-size: 15px;
+    line-height: 1;
+    cursor: default;
+}
+
+#replies .talent .info, #replies .talent .info .photo, #replies .talent .info .details {
+    float: left;
+}
+
+#replies .talent .info .photo {
+    margin-right: 7px;
+}
+
+#replies .talent .info .details {
+    width: 315px;
+    overflow: hidden;
+}
+
+#replies .talent .controls {
+    float: right;
+}
+
+
+/*----------------------------
+ project list
+----------------------------*/
+#projects .project {
+    margin: 24px 0 36px;
+    border-bottom: 1px solid #e6e3db;
+    padding-bottom: 36px;
+    position: relative;
+}
+
+#projects .project:target {
+    padding: 12px;
+    border: 5px solid #f5f760;
+}
+
+#projects .project p {
+    margin-top: 9px;
+}
+
+#projects .project a.btn {
+    margin-top: 12px;
+}
+
+a.flag {
+    margin-left: 12px;
+    color: #a19e99;
+}
+
+.talent a.flag {
+    text-decoration: none;
+}
+
+a.flag:hover {
+    color: #f72828;
+}
+
+ul.flag-reasons {
+    position: absolute;
+    background: #e6e3db;
+    margin: 0;
+    padding: 6px 12px;
+    list-style: none;
+}
+
+ul.flag-reasons a {
+    text-decoration: none;
+}
+
+ul.flag-reasons li {
+    margin-bottom: 8px;
+}
+
+ul.flag-reasons li:last-child {
+    margin-bottom: 0;
+}
+
+ul.flag-reasons li:last-child a {
+    color: #a19e99;
+}
+
+#projects .project h2 a {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+#projects .project:target h2 a {
+    font-size: 24px;
+}
+
+#project-owners, #talent {
+    border-top: 3px solid #eee;
+    padding-top: 21px;
+}
+
+#project-owners .btn, #talent .btn {
+    display: block;
+}
+
+
+/*----------------------------
+ landing pages
+----------------------------*/
+#content.landing h1 {
+    font-size: 36px;
+}
+
+#content.landing p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 32px;
+}
+
+#content.landing img {
+    margin-top: 12px;
+}
+
+#content.static h2 {
+    display: inline-block;
+    background: #32342e;
+    color: #fff;
+    padding: 4px;
+    font-size: 18px;
+    margin: 18px 0 12px;
+}
+
+#content.static ul li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 21px;
+}
+
+
+/*----------------------------
+ self-clearing floats
+----------------------------*/
+#header:after,
+.stats:after,
+#signup:after,
+.talent:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
