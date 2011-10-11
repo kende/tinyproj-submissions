@@ -41,17 +41,7 @@
                     %option{:value => "Copywriter"} Copywriter
                     %option{:value => "Illustrator"} Illustrator
               / Stop here and review before continuing.
-              %div
-                %label{:for => "duration_days"}
-                  When do you need it completed?
-                  %span Please be as realistic as possible
-                %br
-                  %select#duration_days{:name => "duration_days"}
-                    %option{:value => "1"} ASAP
-                    %option{:value => "7"} 7 days
-                    %option{:selected => "selected", :value => "14"} 14 days
-                    %option{:value => "21"} 21 days
-              %div
+              %div    
                 %label{:for => "title"} Summarize the project
                 %br
                   %input#title{:name => "title", :type => "text", :value => ""}
@@ -68,22 +58,26 @@
                 %label{:for => "url"} Optionally provide a URL where people can learn more
                 %br
                   %input#url{:name => "url", :type => "text", :value => ""}
-              .checky
-                %h4 Who are you looking for?
+              %div
+                %label{:for => "duration_days"}
+                  When do you need it completed?
+                  %span Please be as realistic as possible
+                %br
+                  %select#duration_days{:name => "duration_days"}
+                    %option{:value => "1"} ASAP
+                    %option{:value => "7"} 7 days
+                    %option{:selected => "selected", :value => "14"} 14 days
+                    %option{:value => "21"} 21 days
+              %div.checky
+                %label{:for => "timeline"} Are you flexible about when the project needs to be delivered?
+                %br
+                  %input{:name => "is_negotiable", :type => "checkbox"}
+                    Yes
+                    %span (Let's talk about how long it should take.)
                 %label
-                  %input{:name => "is_dev", :type => "checkbox"}
-                    A Developer  
-                    %span PHP, Ruby, Python, JS, HTML, CSS, etc.
-                %label
-                  %input{:name => "is_design", :type => "checkbox"}
-                    A Designer  
-                    %span Icons, Web apps, Mobile apps, etc.
-                %label
-                  %input{:name => "is_copy", :type => "checkbox"}
-                    A Copywriter
-                %label
-                  %input{:name => "is_illus", :type => "checkbox"}
-                    An Illustrator
+                  %input{:name => "is_not_negotiable", :type => "checkbox"}
+                    No
+                    %span (Really need this right away!)
               .ctls
                 %button.btn
                   Submit for approval
