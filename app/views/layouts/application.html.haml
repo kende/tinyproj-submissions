@@ -7,3 +7,7 @@
     = csrf_meta_tags
   %body
     = yield
+  :javascript
+    $(document).ready(function(){
+      $(".chzn-select").chosen();
+    });

@@ -25,12 +25,22 @@
                   %input#email{:name => "email", :type => "text", :value => ""}
               %div
                 / TODO message about low budgets
+                / Change this to 'What do you need?' with chosen select, amount you're offering for each, budget slider next to each, and comment about how your budget relates to getting quality results 
                 %label{:for => "budget"}
-                  What's the budget?
-                  %span USD
+                  Who are you looking for?
                 %br
-                  $
-                  %input#budget{:name => "budget", :type => "text", :value => "1000"}
+                  %select#skills_needed.chzn-select{"data-placeholder" => "Choose up to three", :multiple => ""}
+                    %option{:value => "Who are you looking for?"}
+                    %option{:value => "Frontend Dev"} Frontend Dev (HTML, CSS, Javascript, etc.)
+                    %option{:value => "Application Dev"} Application Dev (Ruby, Python, PHP, etc.)
+                    %option{:value => "Visual Designer"} Visual Designer (Someone to create a look and feel for your site)
+                    %option{:value => "UX Designer"} UX Designer (wireframes, thinking through the problem)
+
+                    %option{:value => "Mobile Dev"} Mobile Dev (iPhone, Android, Blackberry, ...)
+                    %option{:value => "Branding + Logo Designer"} Branding + Logo Design
+                    %option{:value => "Copywriter"} Copywriter
+                    %option{:value => "Illustrator"} Illustrator
+              / Stop here and review before continuing.
               %div
                 %label{:for => "duration_days"}
                   When do you need it completed?
