@@ -24,21 +24,37 @@
                 %br
                   %input#email{:name => "email", :type => "text", :value => ""}
               %div
-                / TODO message about low budgets 
-                %label{:for => "budget"}
+                %label{:for => "talent"}
                   Who are you looking for?
                 %br
-                  %select#skills_needed.chzn-select{"data-placeholder" => "Choose up to three", :multiple => ""}
+                  %select#skills_needed.chzn-select{"data-placeholder" => "Choose up to three...", :multiple => ""}
                     %option{:value => "Who are you looking for?"}
-                    %option{:value => "Frontend Dev"} Frontend Dev (HTML, CSS, Javascript, etc.)
-                    %option{:value => "Application Dev"} Application Dev (Ruby, Python, PHP, etc.)
-                    %option{:value => "Visual Designer"} Visual Designer (Someone to create a look and feel for your site)
-                    %option{:value => "UX Designer"} UX Designer (wireframes, thinking through the problem)
+                    %option{:value => "Frontend Dev"} Frontend Dev ( HTML, CSS, Javascript, etc. )
+                    %option{:value => "Application Dev"} Application Dev ( Ruby, Python, PHP, etc. )
+                    %option{:value => "Visual Designer"} Visual Designer ( Someone to create a look and feel for your site. )
+                    %option{:value => "UX Designer"} UX Designer ( Wireframes + helping you think through your goals. )
 
-                    %option{:value => "Mobile Dev"} Mobile Dev (iPhone, Android, Blackberry, ...)
+                    %option{:value => "Mobile Dev"} Mobile Dev ( iPhone, Android, Blackberry, ... )
                     %option{:value => "Branding + Logo Designer"} Branding + Logo Design
                     %option{:value => "Copywriter"} Copywriter
                     %option{:value => "Illustrator"} Illustrator
+              %div#budget
+                / TODO message about low budgets 
+                %label{:for => "budget"} 
+                  What's the budget?
+                  %span USD
+                %br
+                  / Append li to ul dynamically on option select
+                  %ul
+                    %li 
+                      [placeholder for who you're looking for]
+                      %input.budget-item{:name => "budget-item", :type => "text", :value => "", :style => "width: 60px; margin: 0 0 0 10px;", "data-placeholder" => "Budget..."}
+                    %li 
+                      [placeholder for who you're looking for]
+                      %input.budget-item{:name => "budget-item", :type => "text", :value => "", :style => "width: 60px; margin: 0 0 0 10px;", "data-placeholder" => "Budget..."}
+                    %li 
+                      [placeholder for who you're looking for]
+                      %input.budget-item{:name => "budget-item", :type => "text", :value => "", :style => "width: 60px; margin: 0 0 0 10px;", "data-placeholder" => "Budget..."}                      
               %div    
                 %label{:for => "title"} Summarize the project
                 %br
@@ -72,7 +88,6 @@
                   %input{:name => "is_negotiable", :type => "checkbox"}
                     Yes
                     %span (Let's talk about how long it should take.)
-                %label
                   %input{:name => "is_not_negotiable", :type => "checkbox"}
                     No
                     %span (Really need this right away!)
